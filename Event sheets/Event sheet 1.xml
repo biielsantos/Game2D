@@ -2,5 +2,43 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
-    <events />
+    <events>
+        <variable constant="0" name="pontos" sid="884749533737127" static="0" type="number">0</variable>
+        <event-block sid="454639314564270">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="554687317887305" type="heroi">
+                    <param id="0" name="Object">inimigo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="857839722919622" type="inimigo" />
+            </actions>
+        </event-block>
+        <event-block sid="189055841672024">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="767420226978028" type="heroi">
+                    <param id="0" name="Object">moeda</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="695375050464488" type="moeda" />
+                <action id="-10" name="Add to" sid="820976717445307" type="System">
+                    <param id="0" name="Variable">pontos</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="190779592289707">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="971174474923253" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="480666946561462" type="placar">
+                    <param id="0" name="Text">&quot;Pontos: &quot;&amp;pontos</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>

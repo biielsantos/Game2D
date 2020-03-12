@@ -116,7 +116,7 @@
         </event-block>
         <event-block sid="201146031314495">
             <conditions>
-                <condition id="0" name="On key pressed" sid="368505722385826" type="Keyboard">
+                <condition id="2" name="Key is down" sid="406936264757466" type="Keyboard">
                     <param id="0" name="Key">39</param>
                 </condition>
             </conditions>
@@ -128,13 +128,39 @@
         </event-block>
         <event-block sid="338921629127898">
             <conditions>
-                <condition id="0" name="On key pressed" sid="387498048688394" type="Keyboard">
+                <condition id="2" name="Key is down" sid="796155180005702" type="Keyboard">
                     <param id="0" name="Key">37</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="7" name="Set mirrored" sid="122891613025643" type="animationhero">
                     <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="316484217417535">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="872767618198006" type="heroi">
+                    <param id="0" name="Object">espinhos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="119753674831809" type="System">
+                    <param id="0" name="Variable">Vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="207373188966981">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="800206577044592" type="heroi">
+                    <param id="0" name="Object">inimigo2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="531924464328568" type="System">
+                    <param id="0" name="Variable">Vida</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
